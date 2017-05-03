@@ -1,0 +1,991 @@
+/* Copyright Drew Silcock (2016) */
+
+/* https://coolors.co/9debff-ff99ff-007ea7-003249-ccdbdc */
+
+/* Hannah's Pink: #ffaaaa */
+/* Andy's Blue:  #b7f0ff */
+
+html,
+body {
+  font-family: 'Alegreya Sans', serif;
+  color: #3c3c3c;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 75px;
+  min-height: 100%;
+}
+
+body.sp-auth-complete {
+  background: none;
+}
+
+.hp-header .mdl-layout__header,
+.hp-header .mdl-layout__drawer-button {
+  color: rgba(255, 255, 255, 0.87)
+}
+
+/* ==== Navbar ==== */
+
+.hp-navbar {
+  background: rgba(245, 245, 245, 0);
+  margin-bottom: 0;
+  font-weight: bold;
+
+  color: white;
+  text-shadow: none;
+
+  border: none;
+  border-bottom: 1px solid rgba(230, 230, 230, 0);
+}
+
+.navbar-header {
+  width: 140px;
+}
+
+.hp-navbar.navbar > .container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hp-navbar.navbar .navbar-nav>li>.hp-navlink {
+  color: white;
+  text-shadow: none;
+  border-radius: 100px;
+  transition: all .2s ease-in-out;
+
+  background-color: transparent;
+  padding: 15px;
+  border: none;
+}
+
+.hp-navbar.navbar .navbar-nav>li>.hp-navlink:hover,
+.hp-navbar.navbar .navbar-nav>li>.hp-navlink:focus {
+  /* I don't like using 'important', but it's needed here to
+   * overcome the tweening, which applies style inline. */
+  color: #ffe059 !important;
+}
+
+.hp-navbar.navbar .navbar-nav>.hp-brand {
+  background: #9dEbff;
+}
+
+.hp-navbar.navbar .navbar-nav>li.active>.hp-navlink {
+  background: #003249;
+
+  filter: none;
+  box-shadow: none;
+}
+
+.hp-brand.navbar-brand {
+  padding: 2px 20px;
+  color: white;
+  text-shadow: none;
+  position: relative;
+  left: 0;
+  width: 100px;
+  margin-left: 0;
+
+  transition: all .1s ease-in-out;
+
+  height: 70px;
+  width: 140px;
+}
+
+.hp-brand.navbar-brand:hover,
+.hp-brand.navbar-brand:focus {
+  color: #9dEbff;
+  text-shadow: 0 0 1px white;
+}
+
+.hp-brand.navbar-brand.ds-logo {
+  margin: 0;
+  padding: 0;
+  font-size: 30pt;
+  padding-top: 25px;
+}
+
+.hp-brand.navbar-brand.ds-logo::before,
+.hp-brand.navbar-brand.ds-logo::after {
+  font-size: inherit;
+  border-width: 4px;
+  border-color: #ffe059;
+  padding-top: inherit;
+}
+
+.hp-navbar.navbar > .container > .navbar-collapse {
+  float: right;
+}
+
+/* ==== Main Content ==== */
+
+.hp-content {
+  padding: 20px;
+}
+
+/* ==== Header Image ==== */
+
+header {
+  overflow: hidden;
+}
+
+.hp-header__container {
+  border: none;
+  height: 100vh;
+}
+
+.ds-slideshow {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  position: absolute;
+}
+
+.ds-slideshow__gradient {
+  background: linear-gradient(to bottom, black, transparent);
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 100%;
+}
+
+.hp-header .ds-next-section {
+  color: white;
+}
+
+@keyframes ds-slideshow-fade {
+  0% {
+    opacity: 0;
+  }
+  2.77778% {
+    opacity: 1;
+  }
+  16.66667% {
+    opacity: 1;
+  }
+  19.44444% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ds-slideshow__slide {
+  width: 100%;
+  height: 100vh;
+
+  animation-name: ds-slideshow-fade;
+  animation-duration: 72s;
+  animation-iteration-count: infinite;
+
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  background: center / cover no-repeat;
+}
+
+.ds-slideshow__slide:nth-child(1) {
+  animation-delay: 0s;
+  background-image: url(../images/hero-1.jpg);
+}
+.ds-slideshow__slide:nth-child(2) {
+  animation-delay: 12s;
+  background-image: url(../images/hero-2.jpg);
+}
+.ds-slideshow__slide:nth-child(3) {
+  animation-delay: 24s;
+  background-image: url(../images/hero-3.jpg);
+}
+.ds-slideshow__slide:nth-child(4) {
+  animation-delay: 36s;
+  background-image: url(../images/hero-4.jpg);
+}
+.ds-slideshow__slide:nth-child(5) {
+  animation-delay: 48s;
+  background-image: url(../images/hero-5.jpg);
+}
+.ds-slideshow__slide:nth-child(6) {
+  animation-delay: 60s;
+  background-image: url(../images/hero-6.jpg);
+}
+
+.hp-header {
+  height: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.hp-drawer-title {
+  margin: auto auto 10px auto;
+}
+
+/* Ignore Above */
+.hp-landing-image {
+  width: 100%;
+}
+
+.hp-grow {
+  transition: all .2 ease-in-out;
+}
+
+.hp-grow:hover
+.hp-grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hp-header__inner {
+  width: 100%;
+  position: absolute;
+  top: 35vh;
+}
+
+.hp-header__title {
+  margin: 0;
+  padding-top: 15px;
+  font-family: 'Parisienne', cursive;
+  text-shadow: 0 1px 1px rgb(69, 67, 67);
+  font-size: 75pt;
+}
+
+.hp-header__title-drew {
+  /*color: #0a0a7f;*/
+  /*color: #ffe059;*/
+  color: #4747ff;
+
+  position: relative;
+  right: 50px;
+  bottom: 20px;
+}
+
+.hp-header__title-ampersand {
+  vertical-align: text-bottom;
+  font-size: 50pt;
+
+  display: inline-block;
+  position: relative;
+  right: 115px;
+}
+
+.hp-header__title-ellen {
+  color: #ffe059;
+
+  display: block;
+  position: relative;
+  left: 120px;
+  bottom: 30px;
+}
+
+/* Leading text below header. */
+.hp-title,
+.hp-lead {
+  text-align: center;
+}
+
+.hp-lead {
+  /* Darkish grey */
+  color: #737373;
+}
+
+/* Section title style */
+.hp-section-title {
+  font-style: italic;
+  font-size: 40px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+  color: #555;
+  border-bottom: ridge #555;
+}
+
+@media (max-width: 400px) {
+  .hp-section-title {
+    font-size: 30px;
+  }
+}
+
+.hp-section-title__icon {
+  float: right;
+}
+
+/* Section paragraph style */
+.hp-section-paragraph {
+  font-size: large;
+  margin: 25px 0;
+}
+
+.hp-address {
+  font-size: large;
+}
+
+/* ==== Timeline ==== */
+
+.hp-timeline__section-title {
+  width: 83%;
+  position: absolute;
+}
+
+.hp-timeline {
+  padding-top: 125px;
+  margin: auto;
+}
+
+.hp-timeline__title {
+  float: left;
+}
+
+.hp-timeline__time {
+  float: right;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.hp-timeline li .timeline-panel {
+  transition: transform .2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  /* On small screens, all panels appear on right-hand side. */
+  .hp-timeline li .timeline-panel {
+    transform-origin: left;
+  }
+
+  /* On small screens, scaling X doesn't work; just scale only Y instead. */
+  .hp-timeline li:hover .timeline-panel,
+  .hp-timeline li:focus .timeline-panel{
+    transform: scaleY(1.1);
+  }
+}
+
+@media (min-width: 768px) {
+  /* On larger screens, normal panels are on left-hand side. */
+  .hp-timeline li:nth-child(odd) .timeline-panel {
+    transform-origin: right;
+  }
+
+  /* And inverted panels are on right-hand side. */
+  .hp-timeline li:nth-child(even) .timeline-panel {
+    transform-origin: left;
+  }
+
+  .hp-timeline li:hover .timeline-panel,
+  .hp-timeline li:focus .timeline-panel{
+    transform: scale(1.1);
+  }
+}
+
+/* ==== Timeline Icons ==== */
+
+/* Two rings together */
+.hp-ring-left {
+  position: relative;
+  left: 7px;
+}
+.hp-ring-right {
+  position: relative;
+  right: 7px;
+}
+
+.hp-timeline .timeline li:nth-child(odd) .timeline-panel {
+  float: left;
+}
+
+.hp-timeline .timeline li:nth-child(even) .timeline-panel {
+  float: right;
+}
+
+.hp-timeline .timeline li:nth-child(odd) .timeline-badge {
+  background: #4747ff;
+}
+
+.hp-timeline .timeline li:nth-child(even) .timeline-badge {
+  background: #ffe059;
+}
+
+.hp-timeline .timeline li .timeline-badge::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.hp-timeline .timeline li:hover .timeline-badge::after,
+.hp-timeline .timeline li:focus .timeline-badge::after {
+  opacity: 1;
+}
+
+/* ==== On The Day Section ==== */
+
+.hp-menu {
+  font-size: large;
+}
+
+.hp-menu .hp-course__starter,
+.hp-menu .hp-course__dessert,
+.hp-menu .hp-course__starter .panel-heading,
+.hp-menu .hp-course__dessert .panel-heading {
+  border-color: #f1a1a1;
+}
+
+.hp-menu .hp-course__starter .panel-heading,
+.hp-menu .hp-course__dessert .panel-heading {
+  background: #ffaaaa;
+}
+
+.hp-menu .hp-course__main,
+.hp-menu .hp-course__main .panel-heading {
+  border-color: #b0e1ef;
+}
+
+.hp-menu .hp-course__main .panel-heading {
+  background: #b6f0ff;
+}
+
+.hp-menu .panel-title {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.hp-menu .hp-menu__or {
+  font-family: 'Parisienne', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+
+  /* Make position of line in after pseudoelement relative to this element. */
+  position: relative;
+
+  /* Allow line in after pseudoelement to be behind text. */
+  z-index: 2;
+}
+
+.hp-menu .hp-menu__or::before,
+.hp-menu .hp-menu__or::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: #ddd;
+  width: 45%;
+  display: block;
+  z-index: -1;
+}
+
+.hp-menu .hp-menu__or::before {
+  left: 0;
+}
+
+.hp-menu .hp-menu__or::after {
+  left: 55%;
+}
+
+/* ==== Accommodation Section ==== */
+
+.hp-thumbnail.thumbnail .caption > h3 {
+  margin-top: 0;
+}
+
+.hp-thumbnail > img {
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .hp-thumbnail__container {
+    width: 100%;
+  }
+}
+
+/* ==== Masonry Layout ==== */
+
+.ds-masonry {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .ds-masonry {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+.ds-masonry__brick {
+  width: 100%;
+  display: inline-block;
+}
+
+/* ==== General Purpose Text Styles ==== */
+
+.hp-text__center {
+  text-align: center;
+}
+
+/* ==== Reusable logo ==== */
+
+.ds-logo {
+  position: absolute;
+  left: 150px;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+  color: #1b5a75;
+  text-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 30pt;
+  padding-top: 72px;
+  z-index: -1;
+}
+
+.ds-logo::before {
+  content: 'D';
+  padding-top: 25px;
+  font-size: 75pt;
+
+  position: absolute;
+  right: 45%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: transparent;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
+
+  border: 8px solid #1b5a75;
+  z-index: 1;
+}
+
+.ds-logo::after {
+  content: 'E';
+  padding-top: 25px;
+  font-size: 75pt;
+
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 45%;
+  top: 0;
+
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: transparent;
+  box-shadow: 0 0 4px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,0.5);
+
+  border: 8px solid #1b5a75;
+  z-index: 1;
+}
+
+.ds-logo > .ds-logo__d,
+.ds-logo > .ds-logo__e {
+  position: relative;
+  top: 25%;
+  text-transform: uppercase;
+  font-size: 50pt;
+}
+
+/* ==== Back to Top Button ==== */
+
+.hp-button {
+  background: #0a0a7f;
+  border: #9dEbff;
+
+  transition: background .2s ease-in-out;
+}
+
+.hp-button__oval {
+  border-radius: 100%;
+}
+
+.hp-button:hover,
+.hp-button:focus {
+  background: #4747ff;
+}
+
+.hp-back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 100;
+
+  transition: background .2s ease-in-out,
+              transform 0.2s ease-in-out;
+}
+
+.hp-back-to-top:hover,
+.hp-back-to-top:focus {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* Pre-render shadow, but hide it. */
+.hp-back-to-top::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+
+  box-shadow: 0 2px 10px #7f7f7f;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Simply un-hide shadow on hover. */
+.hp-back-to-top:hover::after,
+.hp-back-to-top:focus::after {
+  opacity: 1;
+}
+
+/* Bit of padding to make chevron look middle of button. */
+.hp-back-to-top .fa {
+  padding-bottom: 5px;
+}
+
+/* ==== Paginator buttons ==== */
+
+.ds-prev-section__container,
+.ds-next-section__container {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 50pt;
+}
+
+.ds-prev-section__container {
+  top: 100px;
+}
+
+.ds-next-section__container {
+  bottom: 0;
+}
+
+.ds-prev-section,
+.ds-next-section {
+  border-radius: 100%;
+  background: none;
+  transition: all .25s ease-in-out;
+}
+
+.ds-prev-section:hover,
+.ds-prev-section:focus,
+.ds-next-section:hover,
+.ds-next-section:focus {
+  color: #ffe059;
+  background: none;
+}
+
+/* ==== Left-right layout for main content ==== */
+
+.hp-section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hp-section__content {
+  padding: 75px 0;
+}
+
+.hp-section:last-child {
+  /* Make space for footer to fit in. */
+  min-height: calc(100vh - 90px);
+}
+
+/* ==== Countdown ==== */
+
+.ds-countdown__container {
+  text-align: center;
+
+  position: relative;
+  top: 320px;
+}
+
+.ds-countdown {
+  width: auto;
+  display: inline-block;
+}
+
+.ds-countdown .flip-clock-divider .flip-clock-label {
+  font-family: 'Parisienne', cursive;
+  font-size: large;
+  z-index: 10; /* Put above countdown numbers. */
+}
+
+/* Change the background colour of the tiles. */
+.flip-clock-wrapper ul li a div div.inn {
+  background-color: #0a0a7f;
+  color: white;
+  text-shadow: 0 1px 2px #2d2d2d;
+}
+
+/* Override colour of colons. */
+.flip-clock-dot {
+  background: white;
+  box-shadow: 0 0 5px 1px black;
+}
+
+/* ==== FlipClock Size ==== */
+
+@media (min-width: 575px) {
+  .ds-countdown .flip-clock-divider.days .flip-clock-label {
+      right: -122px;
+  }
+
+  .ds-countdown .flip-clock-divider.hours .flip-clock-label {
+      right: -92px;
+  }
+
+  .ds-countdown .flip-clock-divider.minutes .flip-clock-label {
+      right: -100px;
+  }
+}
+
+/* Medium-sized screens. */
+@media (max-width: 575px) {
+  .flip-clock-wrapper ul {
+    width: 40px;
+    height: 78px;
+    margin: 0 2px;
+  }
+
+  .flip-clock-wrapper ul li {
+    line-height: 78px;
+  }
+
+  .flip-clock-wrapper ul li a div div.inn {
+    border-radius: 3px;
+    font-size: 50px;
+  }
+
+  .flip-clock-wrapper ul li a div.down {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .flip-clock-wrapper ul li a div.up:after {
+    top: 38px;
+    height: 2px;
+  }
+
+  .ds-countdown .flip-clock-divider.hours .flip-clock-label {
+    right: -65px;
+  }
+
+  .ds-countdown .flip-clock-divider.minutes .flip-clock-label {
+    right: -75px;
+  }
+}
+
+/* Small-sized screens. */
+@media (max-width: 370px) {
+  .flip-clock-wrapper ul {
+    width: 20px;
+    height: 58px;
+    margin: 0 2px;
+    padding: 15px;
+  }
+
+  .flip-clock-wrapper ul li {
+    line-height: 58px;
+  }
+
+  .flip-clock-wrapper ul li a div div.inn {
+    border-radius: 3px;
+    font-size: 25px;
+  }
+
+  .flip-clock-wrapper ul li a div.down {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .flip-clock-wrapper ul li a div.up:after {
+    top: 38px;
+    height: 2px;
+  }
+
+  .flip-clock-wrapper .flip-clock-divider {
+    height: 58px;
+  }
+
+  .flip-clock-wrapper .flip-clock-dot.top {
+    top: 15px;
+  }
+
+  .ds-countdown .flip-clock-divider.days .flip-clock-label {
+    right: -71px;
+  }
+
+  .ds-countdown .flip-clock-divider.hours .flip-clock-label {
+    right: -57px;
+  }
+
+  .ds-countdown .flip-clock-divider.minutes .flip-clock-label {
+    right: -67px;
+  }
+}
+
+/* ==== Google Map of Wedding Location ==== */
+
+.hp-map {
+  height: 500px;
+  opacity: 0;
+
+  /*transition: opacity .5s ease-in;*/
+}
+
+.hp-map.fade-in {
+  opacity: 1;
+}
+
+.hp-map__info-title {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.hp-map__info {
+}
+
+/* ==== Section Images ==== */
+
+.hp-layout__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 90%;
+  padding-top: 90%;
+
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#ds-about .hp-welcome {
+  position: relative;
+  top: 80px;
+}
+
+#ds-about .ds-picture__container {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+}
+
+#ds-about .ds-picture__container .ds-picture {
+  border-radius: 100%;
+  width: 250px;
+  height: 100%;
+  display: inline-block;
+
+  background: url(../images/couple-1.jpg) -20px / cover no-repeat;
+}
+
+#ds-about .ds-countdown__container {
+  top: 170px;
+}
+
+#ds-gift-list .hp-layout__image {
+  background-image: url(../images/couple-2.jpg);
+  border-radius: 50px;
+}
+
+/* ==== Fonts ==== */
+
+.hp-font__normal {
+  font-family: 'Alegreya Sans', serif;
+}
+
+.hp-font__cursive {
+  font-family: 'Parisienne', cursive;
+}
+
+/* ==== Footer ==== */
+
+.hp-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
+.hp-footer .container {
+  /* Vertical align */
+  position: relative;
+  top: 25%;
+
+  font-family: 'Parisienne', cursive;
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .hp-footer .container {
+    font-size: small;
+  }
+}
+
+.hp-footer__middle {
+  text-align: center;
+  display: inline-block;
+  width: 60%;
+}
+
+.hp-footer__left {
+  float: left;
+  width: 20%;
+}
+
+.hp-footer__right {
+  float: right;
+  width: 20%;
+  text-align: right;
+}
+
+.hp-footer__container {
+  text-align: center;
+}

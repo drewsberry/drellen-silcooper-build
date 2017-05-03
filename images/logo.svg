@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="90.797501mm"
+   height="65.994896mm"
+   viewBox="0 0 321.72343 233.84018"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/drew/Dropbox/Code/Wedsite/drellen-silcooper/wedsite/images/logo.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="dropshadow"
+       x="-0.044419721"
+       width="1.0888394"
+       y="-0.050452027"
+       height="1.1009041">
+      <feGaussianBlur
+         inkscape:collect="always"
+         in="SourceAlpha"
+         stdDeviation="0.5"
+         id="feGaussianBlur5" />
+      <feOffset
+         dx="1"
+         dy="1"
+         result="offsetblur"
+         id="feOffset7" />
+      <feMerge
+         id="feMerge9">
+        <feMergeNode
+           id="feMergeNode11" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode13" />
+      </feMerge>
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="dropshadow2"
+       x="-0.040000000000000001"
+       width="1.0888394"
+       y="-0.050452027"
+       height="1.1009041">
+      <feGaussianBlur
+         inkscape:collect="always"
+         in="SourceAlpha"
+         stdDeviation="0.5"
+         id="feGaussianBlur6" />
+      <feOffset
+         dx="0.5"
+         dy="0.5"
+         result="offsetblur"
+         id="feOffset8" />
+      <feMerge
+         id="feMerge10">
+        <feMergeNode
+           id="feMergeNode12" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode14" />
+      </feMerge>
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="135.40058"
+     inkscape:cy="144.97677"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-29.633066,51.71583)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#3c3c3c;stroke-width:1.02779114px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect4152"
+       width="320.69565"
+       height="232.81238"
+       x="30.146961"
+       y="-51.201935"
+       ry="48.481533" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffe059;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#dropshadow)"
+       id="path4136"
+       cx="127.14286"
+       cy="63.549278"
+       r="86.428574" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffe059;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#dropshadow)"
+       id="path4136-3"
+       cx="252.85716"
+       cy="65.421654"
+       r="86.428574" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3c3c3c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#dropshadow)"
+       x="120.9235"
+       y="88.61927"
+       id="text4165"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4167"
+         x="120.9235"
+         y="88.61927"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;font-family:Parisienne;-inkscape-font-specification:Parisienne;opacity:1;fill:#3c3c3c;fill-opacity:1">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3c3c3c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#dropshadow2)"
+       x="191.36729"
+       y="74.696846"
+       id="text4169"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4171"
+         x="191.36729"
+         y="74.696846"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Parisienne;-inkscape-font-specification:Parisienne;fill:#3c3c3c;fill-opacity:1">&amp;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3c3c3c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#dropshadow)"
+       x="253.68962"
+       y="91.696114"
+       id="text4173"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4175"
+         x="253.68962"
+         y="91.696114"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90px;font-family:Parisienne;-inkscape-font-specification:Parisienne;fill:#3c3c3c;fill-opacity:1">E</tspan></text>
+  </g>
+</svg>
