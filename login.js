@@ -1,6 +1,6 @@
 "use strict";
 
-const hmac = "61540500bf604364e4daf74e6a6424cb4ac862886c2bea1681e557406033e3dc";
+const hmac = "ee66945669888a922988f29063972f2d69f542d5366c3be705e255f52bf11a02";
 
 function checkPassword(encryptedContent, password) {
   const hmacAttempt = lib.hmacString(encryptedContent, password);
