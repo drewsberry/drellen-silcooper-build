@@ -1,6 +1,6 @@
 "use strict";
 
-const hmac = "ee66945669888a922988f29063972f2d69f542d5366c3be705e255f52bf11a02";
+const hmac = "3a3b4a4e602cdb551a0d16dabea193b6516ddadc05f827a21932402517f47966";
 
 function checkPassword(encryptedContent, password) {
   const hmacAttempt = lib.hmacString(encryptedContent, password);
@@ -19,7 +19,18 @@ function appendContent(content) {
   $container.attr("id", "sp-content");
   $container.append(content);
 
+  const before = new Date();
+  console.log("Loading content...");
   $(document.body).append($container);
+  const after = new Date();
+  const timeTaken = after - before;
+  console.log("Content loaded in " + (after - before) + " ms.");
+
+  $(window).on("load", function () { console.log("LOAD FIRED."); });
+  $(function () { console.log("READY FIRED."); });
+
+  initialiseMainPage(); // Call inititiase for now unencrypted page.
+  $container.addClass("sp-fadein");
 }
 
 function showInvalidPassword() {
@@ -33,6 +44,9 @@ function showInvalidPassword() {
 function hideAuthenticationUi() {
   const $authUiContainer = $("#sp-ui-container");
   $authUiContainer.addClass("sp-fadeout");
+
+  const uiDeleteDelay = 2000;
+  setTimeout(function() { $authUiContainer.remove(); }, uiDeleteDelay);
 }
 
 function markAuthenticationComplete() {

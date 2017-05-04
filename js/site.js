@@ -261,7 +261,7 @@ function initialiseMap(scrollReveal) {
   });
 }
 
-$(function() {
+function initialiseMainPage() {
   initialiseCountdown();
   initialiseScrollers();
   initialisePaginators();
@@ -269,4 +269,4 @@ $(function() {
   initialiseScrollMagic();
   const scrollReveal = initialiseReveal();
   initialiseMap(scrollReveal);
-});
+}

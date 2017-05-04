@@ -1,10 +1,9 @@
 body {
-  background-color: #247ba0;
+  background-color: #0a0a7f;
 }
 
 #sp-ui-container {
   text-align: center;
-  max-width: 750px;
   transition: opacity .25s ease-in-out;
 }
 
@@ -59,11 +58,22 @@ body {
 #sp-login-password {
   width: 100%;
   margin: 5px auto;
+
+  outline: none;
+  border: 1px solid #ddd;
+  transition: all 0.30s ease-in-out;
+}
+
+#sp-login-password:focus {
+  box-shadow: 0 0 5px #ffe059;
+  border: 1px solid #ffe059;
 }
 
 #sp-login-button {
   width: 100%;
   margin: 5px auto;
+  color: white;
+  font-weight: bold;
 }
 
 #sp-login-error {
@@ -79,4 +89,19 @@ body {
   color: #d40000;
   font-weight: bold;
   font-size: 13pt;
+}
+
+#sp-content {
+  opacity: 0;
+  transition: all .25s ease-in-out;
+}
+
+#sp-content.sp-fadein {
+  opacity: 1;
+}
+
+#sp-ui-container .ds-logo {
+  position: relative;
+  margin: auto;
+  transform: perspective(1px) translateY(30%);
 }

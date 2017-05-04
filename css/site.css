@@ -51,6 +51,22 @@ body.sp-auth-complete {
   width: 140px;
 }
 
+@media screen and (max-width: 768px) {
+  .ds-navbar > .container {
+    padding: 0;
+  }
+
+  .navbar-header {
+    width: 100%;
+    padding-left: 15px;
+  }
+
+  .navbar-collapse .collapse {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .hp-navbar.navbar > .container {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -117,12 +133,7 @@ body.sp-auth-complete {
 .hp-brand.navbar-brand.ds-logo::after {
   font-size: inherit;
   border-width: 4px;
-  border-color: #ffe059;
   padding-top: inherit;
-}
-
-.hp-navbar.navbar > .container > .navbar-collapse {
-  float: right;
 }
 
 /* ==== Main Content ==== */
@@ -552,71 +563,55 @@ header {
 /* ==== Reusable logo ==== */
 
 .ds-logo {
-  position: absolute;
-  left: 150px;
   width: 400px;
   height: 200px;
   text-align: center;
   font-family: 'Parisienne', cursive;
-  color: #1b5a75;
+  color: white;
   text-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
   font-size: 30pt;
-  padding-top: 72px;
   z-index: -1;
+}
+
+.ds-logo::before,
+.ds-logo::after {
+  font-size: 75pt;
+  padding-top: 25px;
+
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+
+  border-radius: 100%;
+  background: transparent;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
+  border: 8px solid #ffe059;
+  z-index: 1;
 }
 
 .ds-logo::before {
   content: 'D';
-  padding-top: 25px;
-  font-size: 75pt;
-
-  position: absolute;
   right: 45%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  background: transparent;
-  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.5);
-
-  border: 8px solid #1b5a75;
-  z-index: 1;
 }
 
 .ds-logo::after {
   content: 'E';
-  padding-top: 25px;
-  font-size: 75pt;
-
-  width: 50%;
-  height: 100%;
-  position: absolute;
   left: 45%;
-  top: 0;
-
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  background: transparent;
-  box-shadow: 0 0 4px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0 0 4px rgba(0,0,0,0.5);
-
-  border: 8px solid #1b5a75;
-  z-index: 1;
 }
 
-.ds-logo > .ds-logo__d,
-.ds-logo > .ds-logo__e {
+.ds-logo > .ds-logo__ampersand {
+  height: 100%;
+  font-size: 20pt;
+}
+
+.ds-logo > .ds-logo__ampersand::before {
+  content: '&';
+  display: inline-block;
+
   position: relative;
-  top: 25%;
-  text-transform: uppercase;
-  font-size: 50pt;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
 }
 
 /* ==== Back to Top Button ==== */
