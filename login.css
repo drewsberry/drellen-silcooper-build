@@ -79,6 +79,8 @@ body {
 #sp-login-error {
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
+  position: relative;
+  bottom: 15px;
 }
 
 #sp-login-error.sp-fadein {
@@ -104,4 +106,111 @@ body {
   position: relative;
   margin: auto;
   transform: perspective(1px) translateY(30%);
+}
+
+@media screen and (max-height: 870px) {
+  #sp-ui-container .ds-logo {
+    transform: perspective(1px) translateY(20%);
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #sp-ui-container .ds-logo {
+    transform: perspective(1px) translateY(10%);
+  }
+}
+
+@media screen and (max-height: 750px) {
+  #sp-ui-container .ds-logo {
+    margin-top: 5%;
+  }
+
+  .ds-logo {
+    width: 200px;
+    height: 100px;
+  }
+
+  .ds-logo::before,
+  .ds-logo::after {
+    font-size: 45pt;
+    padding-top: 8px;
+    border-width: 5px;
+  }
+
+  .ds-logo > .ds-logo__ampersand {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  #sp-ui-container .ds-logo {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-height: 530px) {
+  .ds-logo {
+    width: 150px;
+    height: 75px;
+  }
+
+  .ds-logo::before,
+  .ds-logo::after {
+    font-size: 30pt;
+    border-width: 3px;
+  }
+}
+
+#sp-loading-container.sp-hide {
+  display: none;
+}
+
+/* See http://tobiasahlin.com/spinkit/ */
+
+#sp-loading-spinner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#sp-loading-spinner .sp-loading-spinner__bounce-1,
+#sp-loading-spinner .sp-loading-spinner__bounce-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  width: 200px;
+  width: 50vmin;
+  height: 200px;
+  height: 50vmin;
+
+  border-radius: 50%;
+  background-color: #ffe059;
+  opacity: 0.6;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+#sp-loading-spinner .sp-loading-spinner__bounce-2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
 }

@@ -1,10 +1,3 @@
-/* Copyright Drew Silcock (2016) */
-
-/* https://coolors.co/9debff-ff99ff-007ea7-003249-ccdbdc */
-
-/* Hannah's Pink: #ffaaaa */
-/* Andy's Blue:  #b7f0ff */
-
 html,
 body {
   font-family: 'Alegreya Sans', serif;
@@ -52,8 +45,12 @@ body.sp-auth-complete {
 }
 
 @media screen and (max-width: 768px) {
-  .ds-navbar > .container {
-    padding: 0;
+  .ds-navbar {
+  }
+
+  .ds-navbar .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .navbar-header {
@@ -61,9 +58,11 @@ body.sp-auth-complete {
     padding-left: 15px;
   }
 
-  .navbar-collapse .collapse {
-    width: 100%;
-    margin: 0;
+  .navbar-collapse {
+    border: none;
+    box-shadow: none;
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent)
   }
 }
 
@@ -134,6 +133,19 @@ body.sp-auth-complete {
   font-size: inherit;
   border-width: 4px;
   padding-top: inherit;
+}
+
+.hp-navbar .navbar-toggle {
+  border-color: white;
+  background: none;
+
+  transition: all .25s ease-in-out;
+}
+
+.hp-navbar .navbar-toggle:hover,
+.hp-navbar .navbar-toggle:focus {
+  box-shadow: 0 0 5px 0px white;
+  background-color: rgba(60, 60, 60, 0.1);
 }
 
 /* ==== Main Content ==== */
@@ -303,6 +315,25 @@ header {
   bottom: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .hp-header__title {
+    font-size: 50pt;
+  }
+
+  .hp-header__title-ampersand {
+    font-size: 40pt;
+    right: 77px;
+  }
+
+  .hp-header__title-ellen {
+    left: 83px;
+  }
+}
+
+.hp-header .ds-next-section__container {
+  bottom: 50px;
+}
+
 /* Leading text below header. */
 .hp-title,
 .hp-lead {
@@ -396,7 +427,7 @@ header {
   }
 
   .hp-timeline li:hover .timeline-panel,
-  .hp-timeline li:focus .timeline-panel{
+  .hp-timeline li:focus .timeline-panel {
     transform: scale(1.1);
   }
 }
@@ -411,14 +442,6 @@ header {
 .hp-ring-right {
   position: relative;
   right: 7px;
-}
-
-.hp-timeline .timeline li:nth-child(odd) .timeline-panel {
-  float: left;
-}
-
-.hp-timeline .timeline li:nth-child(even) .timeline-panel {
-  float: right;
 }
 
 .hp-timeline .timeline li:nth-child(odd) .timeline-badge {
@@ -716,6 +739,7 @@ header {
 .hp-section {
   min-height: 100vh;
   position: relative;
+  padding-bottom: 25px;
 }
 
 .hp-section__content {
@@ -731,6 +755,7 @@ header {
 
 .ds-countdown__container {
   text-align: center;
+  height: 150px;
 
   position: relative;
   top: 320px;
@@ -762,7 +787,7 @@ header {
 
 /* ==== FlipClock Size ==== */
 
-@media (min-width: 575px) {
+@media screen and (min-width: 575px) {
   .ds-countdown .flip-clock-divider.days .flip-clock-label {
       right: -122px;
   }
@@ -777,7 +802,7 @@ header {
 }
 
 /* Medium-sized screens. */
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .flip-clock-wrapper ul {
     width: 40px;
     height: 78px;
@@ -813,7 +838,7 @@ header {
 }
 
 /* Small-sized screens. */
-@media (max-width: 370px) {
+@media screen and (max-width: 400px) {
   .flip-clock-wrapper ul {
     width: 20px;
     height: 58px;
@@ -846,6 +871,10 @@ header {
 
   .flip-clock-wrapper .flip-clock-dot.top {
     top: 15px;
+  }
+
+  .flip-clock-wrapper .flip-clock-dot.bottom {
+    bottom: 15px;
   }
 
   .ds-countdown .flip-clock-divider.days .flip-clock-label {
@@ -927,6 +956,54 @@ header {
   border-radius: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  #ds-about .hp-welcome {
+    position: static;
+  }
+
+  #ds-about .ds-picture__container {
+    position: static;
+  }
+
+  #ds-about .ds-countdown__container {
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #ds-about .ds-countdown__container {
+    top: 50px;
+  }
+
+  .ds-countdown {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #ds-about .ds-countdown__container {
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #ds-about .ds-countdown__container {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ds-about .ds-countdown__container {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #ds-about .ds-countdown__container {
+    height: 320px;
+  }
+}
+
 /* ==== Fonts ==== */
 
 .hp-font__normal {
@@ -945,7 +1022,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  height: 50px;
+  height: 80px;
   background-color: #f5f5f5;
 }
 
@@ -967,7 +1044,7 @@ header {
 .hp-footer__middle {
   text-align: center;
   display: inline-block;
-  width: 60%;
+  width: 70%;
 }
 
 .hp-footer__left {

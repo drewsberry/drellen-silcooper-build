@@ -9,10 +9,10 @@ function scrollToTop() {
 }
 
 function initialiseCountdown() {
-  const $countdown = $('.ds-countdown');
-  const weddingDate = new Date($countdown.data("date"));
-  const now = new Date();
-  const secondsToWedding = (weddingDate - now) * 0.001;
+  var $countdown = $('.ds-countdown');
+  var weddingDate = new Date($countdown.data("date"));
+  var now = new Date();
+  var secondsToWedding = (weddingDate - now) * 0.001;
 
   $countdown.FlipClock(secondsToWedding, {
     clockFace: 'DailyCounter',
@@ -23,12 +23,12 @@ function initialiseCountdown() {
 }
 
 function initialiseScrollers() {
-  const $scrollers = $('.hp-scroller');
+  var $scrollers = $('.hp-scroller');
 
   $scrollers.each(function (index, element) {
-    const $element = $(element);
-    const scrollToSelector = $element.data('scroll-to');
-    const $scrollToElement = $(scrollToSelector);
+    var $element = $(element);
+    var scrollToSelector = $element.data('scroll-to');
+    var $scrollToElement = $(scrollToSelector);
 
     $element.on('click', function setupClickEvent() {
       $('html,body').animate({
@@ -39,20 +39,20 @@ function initialiseScrollers() {
 }
 
 function initialisePaginators() {
-  const $prevPaginators = $('.ds-prev-section');
-  const $nextPaginators = $('.ds-next-section');
+  var $prevPaginators = $('.ds-prev-section');
+  var $nextPaginators = $('.ds-next-section');
 
-  const $sections = $('.hp-section');
+  var $sections = $('.hp-section');
 
   $prevPaginators.each(function setupClickEvent(index, element) {
-    const $element = $(element);
-    const $currentSection = $element.parents('.hp-section');
-    const sectionIndex = $sections.index($currentSection);
+    var $element = $(element);
+    var $currentSection = $element.parents('.hp-section');
+    var sectionIndex = $sections.index($currentSection);
 
     if (sectionIndex === -1 || sectionIndex === 0) {
       console.error("Unable to find previous section for element:", $element);
     } else {
-      const $target = $sections.eq(sectionIndex - 1);
+      var $target = $sections.eq(sectionIndex - 1);
 
       $element.on('click', function animateToNextSection() {
         $('html,body').animate({
@@ -63,14 +63,14 @@ function initialisePaginators() {
   });
 
   $nextPaginators.each(function setupClickEvent(index, element) {
-    const $element = $(element);
-    const $currentSection = $element.parents('.hp-section');
-    const sectionIndex = $sections.index($currentSection);
+    var $element = $(element);
+    var $currentSection = $element.parents('.hp-section');
+    var sectionIndex = $sections.index($currentSection);
 
     if (sectionIndex === -1 || sectionIndex === $sections.length - 1) {
       console.error("Unable to find next section for element:", $element);
     } else {
-      const $target = $sections.eq(sectionIndex + 1);
+      var $target = $sections.eq(sectionIndex + 1);
 
       $element.on('click', function animateToPrevSection() {
         $('html,body').animate({
@@ -82,11 +82,11 @@ function initialisePaginators() {
 }
 
 function initialiseScrollToTopButton() {
-  const $mainContent = $('main');
-  const mainContentScrollPosition = $mainContent.offset().top;
+  var $mainContent = $('main');
+  var mainContentScrollPosition = $mainContent.offset().top;
 
-  const triggerFadeInOut = function () {
-    const currentScrollPosition = $(this).scrollTop();
+  var triggerFadeInOut = function () {
+    var currentScrollPosition = $(this).scrollTop();
 
     if (currentScrollPosition > mainContentScrollPosition) {
       $('#back-to-top').fadeIn();
@@ -99,7 +99,7 @@ function initialiseScrollToTopButton() {
   triggerFadeInOut();
 
   // scroll body to 0px on click
-  const $backToTop = $('#back-to-top');
+  var $backToTop = $('#back-to-top');
   $backToTop.on('click', function scrollToTopWithEvent(evt) {
     scrollToTop();
     evt.preventDefault();
@@ -122,19 +122,23 @@ function initialiseReveal() {
 }
 
 function initialiseScrollMagic() {
-  const controller = new ScrollMagic.Controller();
+  var controller = new ScrollMagic.Controller();
 
-  const navbarSelector = '.navbar.hp-navbar';
-  const navbarLinkSelector = '.hp-navbar.navbar .navbar-nav>li>.hp-navlink';
-  const navbarLogoSelector = '.hp-navbar.navbar .hp-brand.ds-logo';
-  const navbarLogoPseudoSelector = navbarLogoSelector + '::before,' +
+  var navbarSelector = '.navbar.hp-navbar';
+  var navbarLinkSelector = '.hp-navbar.navbar .navbar-nav>li>.hp-navlink';
+  var navbarLogoSelector = '.hp-navbar.navbar .hp-brand.ds-logo';
+  var navbarLogoPseudoSelector = navbarLogoSelector + '::before,' +
                                    navbarLogoSelector + '::after';
-  const navbarTextSelector = navbarLinkSelector + ',' + navbarLogoSelector;
+  var navbarTextSelector = navbarLinkSelector + ',' + navbarLogoSelector;
+  var navbarCollapseSelector = navbarSelector + ' .navbar-collapse';
+  var navbarToggleSelector = navbarSelector + ' .navbar-toggle';
+  var navbarToggleBarsSelector = navbarToggleSelector + ' .icon-bar';
+  var headerTitleSelector = '#ds-header .hp-header__title';
 
-  const $navbar = $(navbarSelector);
-  const navbarHeight = $navbar.height();
+  var $navbar = $(navbarSelector);
+  var navbarHeight = $navbar.height();
 
-  const navbarBackgroundTween = new TimelineMax()
+  var navbarBackgroundTween = new TimelineMax()
     .to(navbarSelector, 1, {
       css: {
         backgroundColor: 'rgba(245, 245, 245, 0.9)',
@@ -142,7 +146,7 @@ function initialiseScrollMagic() {
       ease: Circ.easeOutExpo,
     });
 
-  const navbarBackgroundScene = new ScrollMagic
+  var navbarBackgroundScene = new ScrollMagic
     .Scene({
       triggerElement: 0,
       duration: 400,
@@ -152,7 +156,7 @@ function initialiseScrollMagic() {
     .setTween(navbarBackgroundTween)
     .addTo(controller);
 
-  const navbarBorderTween = new TimelineMax()
+  var navbarBorderTween = new TimelineMax()
     .to(navbarSelector, 1, {
       css: {
         borderColor: 'rgba(230, 230, 230, 1)',
@@ -160,7 +164,7 @@ function initialiseScrollMagic() {
       ease: Circ.easeOutExpo,
     });
 
-  const navbarBorderScene = new ScrollMagic
+  var navbarBorderScene = new ScrollMagic
     .Scene({
       triggerElement: '#ds-about',
       duration: 50,
@@ -170,7 +174,7 @@ function initialiseScrollMagic() {
     .setTween(navbarBorderTween)
     .addTo(controller);
 
-  const navbarTextTween = new TimelineMax()
+  var navbarTextTween = new TimelineMax()
     .to(navbarTextSelector, 1, {
       css: {
         color: '#3c3c3c',
@@ -178,7 +182,7 @@ function initialiseScrollMagic() {
       ease: Circ.easeOutExpo,
     });
 
-  const navbarTextScene = new ScrollMagic
+  var navbarTextScene = new ScrollMagic
     .Scene({
       triggerElement: 0,
       duration: 400,
@@ -188,7 +192,7 @@ function initialiseScrollMagic() {
     .setTween(navbarTextTween)
     .addTo(controller);
 
-  const navbarLogoSizeTween = new TimelineMax()
+  var navbarLogoSizeTween = new TimelineMax()
     .to(navbarLogoSelector, 1, {
       css: {
         width: '100px',
@@ -199,7 +203,7 @@ function initialiseScrollMagic() {
       ease: Circ.easeOutExpo,
     });
 
-  const navbarLogoSizeScene = new ScrollMagic
+  var navbarLogoSizeScene = new ScrollMagic
     .Scene({
       triggerElement: 0,
       duration: 400,
@@ -208,34 +212,104 @@ function initialiseScrollMagic() {
     })
     .setTween(navbarLogoSizeTween)
     .addTo(controller);
+
+  var navbarCollapseTween = new TimelineMax()
+    .to(navbarCollapseSelector, 1, {
+      css: {
+        background: 'none',
+      },
+      ease: Circ.easeOutExpo,
+    });
+
+  var navbarCollapseScene = new ScrollMagic
+    .Scene({
+      triggerElement: 0,
+      duration: 400,
+      triggerHook: 1,
+      offset: 0,
+    })
+    .setTween(navbarCollapseTween)
+    .addTo(controller);
+
+  var navbarToggleOutlineTween = new TimelineMax()
+    .to(navbarToggleSelector, 1, {
+      css: {
+        borderColor: '#3c3c3c',
+      },
+      ease: Circ.easeOutExpo,
+    });
+
+  var navbarToggleOutlineScene = new ScrollMagic
+    .Scene({
+      triggerElement: 0,
+      duration: 400,
+      triggerHook: 1,
+      offset: 0,
+    })
+    .setTween(navbarToggleOutlineTween)
+    .addTo(controller);
+
+  var navbarToggleOutlineBarsTween = new TimelineMax()
+    .to(navbarToggleBarsSelector, 1, {
+      css: {
+        backgroundColor: '#3c3c3c',
+      },
+      ease: Circ.easeOutExpo,
+    });
+
+  var navbarToggleOutlineBarsScene = new ScrollMagic
+    .Scene({
+      triggerElement: 0,
+      duration: 400,
+      triggerHook: 1,
+      offset: 0,
+    })
+    .setTween(navbarToggleOutlineBarsTween)
+    .addTo(controller);
+
+  var headingTitleParallaxTween = new TimelineMax()
+    .add([
+      TweenMax.fromTo(headerTitleSelector, 1, {
+        top: 150,
+      }, {
+        top: -150,
+        ease: Linear.easeNone
+      }),
+    ]);
+
+  var headingTitleParallaxScene = new ScrollMagic
+    .Scene({
+      triggerElement: "#ds-header", duration: $(window).height()})
+    .setTween(headingTitleParallaxTween)
+    .addTo(controller);
 }
 
 function initialiseMap(scrollReveal) {
-  const $mapElement = $('.hp-map');
+  var $mapElement = $('.hp-map');
 
-  const locationData = $mapElement.data('location').split(',');
-  const locationTitle = $mapElement.data('title');
-  const locationDescription = $mapElement.data('description');
+  var locationData = $mapElement.data('location').split(',');
+  var locationTitle = $mapElement.data('title');
+  var locationDescription = $mapElement.data('description');
 
-  const weddingLocation = {
+  var weddingLocation = {
     lat: +locationData[0],
     lng: +locationData[1],
   };
 
-  const mapElement = $mapElement.get(0);
-  const map = new google.maps.Map(mapElement, {
+  var mapElement = $mapElement.get(0);
+  var map = new google.maps.Map(mapElement, {
     center: weddingLocation,
     zoom: 15,
   });
 
-  const marker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
     'title': locationTitle,
     position: weddingLocation,
     map: map,
     animation: google.maps.Animation.DROP,
   });
 
-  const infoWindow = new google.maps.InfoWindow({
+  var infoWindow = new google.maps.InfoWindow({
     'title': locationTitle,
     content: '<div class="hp-map__info-title">' + locationTitle + '</div>' +
              '<div class="hp-map__info">' + locationDescription + '</div>',
@@ -254,7 +328,7 @@ function initialiseMap(scrollReveal) {
     // Event fires after load; only want this to run once on load.
     google.maps.event.clearListeners(map, 'bounds_changed');
 
-    const $map = $('.hp-map');
+    var $map = $('.hp-map');
 
     $map.addClass('fade-in');
     scrollReveal.reveal('.hp-map');
@@ -267,6 +341,6 @@ function initialiseMainPage() {
   initialisePaginators();
   initialiseScrollToTopButton();
   initialiseScrollMagic();
-  const scrollReveal = initialiseReveal();
+  var scrollReveal = initialiseReveal();
   initialiseMap(scrollReveal);
 }
