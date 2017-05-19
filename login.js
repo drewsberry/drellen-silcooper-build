@@ -18,12 +18,12 @@ function checkPassword(encryptedContent, password) {
 }
 
 function showLoadingSpinner() {
-  const $loadingSpinner = $('#sp-loading-container');
+  var $loadingSpinner = $('#sp-loading-container');
   $loadingSpinner.removeClass('sp-hide');
 }
 
 function hideLoadingSpinner() {
-  const $loadingSpinner = $('#sp-loading-container');
+  var $loadingSpinner = $('#sp-loading-container');
   $loadingSpinner.addClass('sp-hide');
 }
 
