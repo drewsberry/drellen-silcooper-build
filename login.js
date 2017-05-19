@@ -8,7 +8,10 @@ function checkPassword(encryptedContent, password) {
   if (hmacAttempt === hmac) {
     var decryptedContent = lib.decryptString(encryptedContent, password);
 
-    return { valid: true, decryptedContent };
+    return {
+      valid: true,
+      decryptedContent: decryptedContent,
+    };
   }
 
   return { valid: false };
