@@ -1,6 +1,18 @@
 "use strict";
 
-var hmac = "d85af7bb1efcaa4b2c66aa7092963327db85be57d8aa1ddbe212f61388339749";
+var hmac = "6128d64a35ffb893ff7b28c2f36bc2c5afe65fccabaa02e55c2b3604a3c9cdc4";
+
+function setupEmailLink() {
+  var $emailLink = $("#sp-info-email");
+
+  // Half-serious, half-fun attempt at spam-busting.
+  var components = [
+    "mailto", ":", "drew", "@", "drewandellenswedding", ".", "co", ".", "uk",
+    "?subject=", "Drew%20and%20Ellen%27s%20Wedding%20Site%20-%20Login",
+  ];
+
+  $emailLink.attr("href", components.join(""));
+}
 
 function checkPassword(encryptedContent, password) {
   var hmacAttempt = lib.hmacString(encryptedContent, password);
@@ -111,6 +123,7 @@ function focusInput() {
 }
 
 $(function () {
+  setupEmailLink();
   initialiseVerifyForm();
   focusInput();
 });
