@@ -372,8 +372,18 @@ header {
   margin: 25px 0;
 }
 
+.hp-section-list,
 .hp-address {
   font-size: large;
+}
+
+.hp-section-list__item {
+  margin: 10px 0;
+}
+
+.hp-section-list__separator {
+  font-style: italic;
+  text-align: center;
 }
 
 /* ==== Timeline ==== */
@@ -642,6 +652,7 @@ header {
 .hp-button {
   background: #0a0a7f;
   border: #9dEbff;
+  font-weight: bold;
 
   transition: background .2s ease-in-out;
 }
