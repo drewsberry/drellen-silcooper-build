@@ -1,6 +1,6 @@
 "use strict";
 
-var hmac = "57f336dad9385364b955177918acc00224b1255370cf00c91a9dccb1729ccb2f";
+var hmac = "6026cfb9d4e0a664b4fcd53f9ea576ba5daea32a001f1c6763f5b150e2ad4e71";
 
 function setupEmailLink() {
   var $emailLink = $("#sp-info-email");
